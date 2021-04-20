@@ -1,5 +1,6 @@
 ﻿#include "List.h"
 #include "AVL.h"
+#include "HashTable.h"
 
 
 using namespace std;
@@ -141,7 +142,7 @@ struct Ticket {
 
 int main()
 {
-	List<int> root;
+	/*List<int> root;
 
 	int mas[5] = { 2,3,6,1,7 };
 
@@ -158,7 +159,24 @@ int main()
 	}
 
 	cout << endl << endl << "contains(5) = " << root.contains(5);
-	cout << endl << endl << "contains(2) = " << root.contains(2);
+	cout << endl << endl << "contains(2) = " << root.contains(2);*/
+
+	/*HashTable<std::string, Flight> Table;
+
+	Flight f = Flight("RUS-359");
+	Flight a = Flight("GER-329");
+	Flight v = Flight("FIN-319");
+
+	Table.add(f.flight_number, f);
+	Table.add(a.flight_number, a);
+	Table.add(v.flight_number, v);
+
+	std::cout << Table["RUS-359"] << std::endl
+		<< Table["GER-329"] << std::endl
+		<< Table["FIN-319"] << std::endl;
+
+	std::cout << Table.contains("FIN-319") << std::endl
+		<< Table.contains("FIN-329") << std::endl;*/
 
 	/*AVL<Flight> root;
 	
