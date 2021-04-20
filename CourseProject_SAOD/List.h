@@ -7,7 +7,7 @@ class List
 {
 private:
 
-	template <typename T>
+    template <typename T>
 	class Node
 	{
 	public:
@@ -95,7 +95,7 @@ void List<T>::clear()
 }
 
 template<typename T>
-List<T>::Node<T>* List<T>::getNodeByIndex(int index)
+typename List<T>::template Node<T>* List<T>::getNodeByIndex(int index)
 {
 	if (this->Size_ <= index || index < 0)
 	{
@@ -218,7 +218,7 @@ inline const int List<T>::smallestSizeLvl()
 }
 
 template<typename T>
-List<T>::Node<T>* List<T>::getNodeByIndexLvl_0(int index)
+typename List<T>::template Node<T>* List<T>::getNodeByIndexLvl_0(int index)
 {
 	Node<T>* cur = head_;
 
@@ -271,7 +271,7 @@ bool List<T>::contains(T data)
 }
 
 template<typename T>
-List<T>::Node<T>* List<T>::find(T data)
+typename List<T>::template Node<T>* List<T>::find(T data)
 {
 	Node<T>* curNode;
 	int cur_i = 0;
