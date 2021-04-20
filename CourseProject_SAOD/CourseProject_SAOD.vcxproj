@@ -145,7 +145,6 @@
   <ItemGroup>
     <ClInclude Include="AVL.h" />
     <ClInclude Include="HashTable.h" />
-    <ClInclude Include="Headers.h" />
     <ClInclude Include="List.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
