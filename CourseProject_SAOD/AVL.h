@@ -128,7 +128,7 @@ void AVL<T>::print(Node<T>* node, int spacer)
 }
 
 template<typename T>
-AVL<T>::Node<T>* AVL<T>::add(Node<T>* node, T data)
+typename AVL<T>::template Node<T>* AVL<T>::add(Node<T>* node, T data)
 {
 	if (node == nullptr)
 	{
@@ -144,10 +144,6 @@ AVL<T>::Node<T>* AVL<T>::add(Node<T>* node, T data)
 		{
 			node->right_ = add(node->right_, data);
 		}	
-		else
-		{
-			std::cout << "Ёлемент уже есть!\n" << std::endl;
-		}	
 	}
 
 	return balance(node);
@@ -160,7 +156,7 @@ void AVL<T>::add(T data)
 }
 
 template<typename T>
-AVL<T>::Node<T>* AVL<T>::remove(Node<T>* node, T data)
+typename AVL<T>::template Node<T>* AVL<T>::remove(Node<T>* node, T data)
 {
 	if (node == nullptr)
 		;
@@ -196,7 +192,7 @@ AVL<T>::Node<T>* AVL<T>::remove(Node<T>* node, T data)
 }
 
 template<typename T>
-AVL<T>::Node<T>* AVL<T>::findMin(Node<T>* node)
+typename AVL<T>::template Node<T>* AVL<T>::findMin(Node<T>* node)
 {
 	if (!node)
 	{
@@ -212,7 +208,7 @@ AVL<T>::Node<T>* AVL<T>::findMin(Node<T>* node)
 }
 
 template<typename T>
-AVL<T>::Node<T>* AVL<T>::removeMin(Node<T>* node)
+typename AVL<T>::template Node<T>* AVL<T>::removeMin(Node<T>* node)
 {
 	if (!node)
 	{
@@ -230,7 +226,7 @@ AVL<T>::Node<T>* AVL<T>::removeMin(Node<T>* node)
 }
 
 template<typename T>
-AVL<T>::Node<T>* AVL<T>::rotR(Node<T>* node)
+typename AVL<T>::template Node<T>* AVL<T>::rotR(Node<T>* node)
 {
 	Node<T>* p2 = node->left_;
 	node->left_ = p2->right_;
@@ -243,7 +239,7 @@ AVL<T>::Node<T>* AVL<T>::rotR(Node<T>* node)
 }
 
 template<typename T>
-AVL<T>::Node<T>* AVL<T>::rotL(Node<T>* node)
+typename AVL<T>::template Node<T>* AVL<T>::rotL(Node<T>* node)
 {
 	Node<T>* p2 = node->right_;
 	node->right_ = p2->left_;
@@ -256,7 +252,7 @@ AVL<T>::Node<T>* AVL<T>::rotL(Node<T>* node)
 }
 
 template<typename T>
-AVL<T>::Node<T>* AVL<T>::balance(Node<T>* node)
+typename AVL<T>::template Node<T>* AVL<T>::balance(Node<T>* node)
 {
 	if (!node)
 	{
